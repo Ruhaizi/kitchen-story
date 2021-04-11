@@ -10,10 +10,10 @@ Admin login page where admin can change password after login if he wants to
 A master list of food items available for purchase
 A functionality to add or remove food items
 
-#Credentials:
+Credentials:
 For User
 Email-ID : user@gmail.com
 Password : user1234
-For Admin
+, For Admin
 Email-Id : admin@gmail.com
 Password : admin1234
