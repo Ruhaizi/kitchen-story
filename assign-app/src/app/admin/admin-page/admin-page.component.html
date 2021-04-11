@@ -1,0 +1,42 @@
+<a id="a" class="btn btn-primary" routerLink="/change-password">Change password</a>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let field of fieldArray; let i = index">
+            <td>
+                <input [(ngModel)]="field.id" class="form-control" type="text" name="{{field.id}}" />
+            </td>
+            <td>
+                <input [(ngModel)]="field.name" class="form-control" type="text" name="{{field.name}}" />
+            </td>
+            <td>
+                <input [(ngModel)]="field.Price" class="form-control" type="text" name="{{field.Price}}" />
+            </td>
+            <td>
+                <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input class="form-control" type="text" id="newAttributeCode" [(ngModel)]="newAttribute.id" name="newAttributeCode" />
+            </td>
+            <td>
+                <input class="form-control" type="text" id="newAttributeName" [(ngModel)]="newAttribute.name" name="newAttributeName" />
+            </td>
+            <td>
+                <input class="form-control" type="text" id="newAttributePrice" [(ngModel)]="newAttribute.Price" name="newAttributePrice" />
+            </td>
+            <td>
+                <button class="btn btn-default" type="button" (click)="addFieldValue()">Add</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,16 @@
+#a{
+    margin: 2px;
+    border-color: darkcyan;
+    background-color: teal;
+    color: white;
+}
+#page{
+    margin: 5%;
+}
+    body {
+        background-image: url('https://i.ytimg.com/vi/YLWi7u3xejA/maxresdefault.jpg');
+      }
+      p
+      {
+          margin-top: 5%;
+      }

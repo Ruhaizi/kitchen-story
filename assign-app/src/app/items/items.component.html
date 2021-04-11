@@ -1,0 +1,48 @@
+
+<div class="container text-center">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for an item in the pantry">
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Item name</th>
+          <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let hero of heroes | filter:searchText" [class.selected]="hero === selectedHero">
+          
+          <td>{{hero.id}}</td>
+          <td>{{hero.name}}</td>
+          <td>{{hero.Price}}</td>
+          <td><button mat-raised-button color="primary" (click)="onSelect(hero)">Select</button> </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    <div><span>Total price is: </span>{{total}}</div>
+    <ul>
+      <li *ngFor="let select of listselected">{{select.name}}, {{select.Price}}</li>
+      <div [list]="listselected"></div>
+      <div><a id="a" class="btn btn-primary" routerLink="/billing">Submit</a>
+        </div>
+    </ul>
+  </div> 
+  </div>
+
+ 
+  
